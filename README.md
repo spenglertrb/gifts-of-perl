@@ -9,3 +9,5 @@ of the file to the source path. The script will check for a valid WebVTT header,
 converting.
 
 I needed this in a workflow to feed a transcoder which did not support WebVTT natively.
+
+I hope you find it usefull.
