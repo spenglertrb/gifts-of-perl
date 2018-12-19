@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# Script to convert WebVTT files to SRT
+# Script to convert WebVTT files to SubRip SRT
 # Usage: convert-vtt2srt.pl <filename.vtt>
 # by @spenglertrb
 
