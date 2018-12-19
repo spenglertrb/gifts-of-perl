@@ -10,10 +10,12 @@ use warnings;
 print "Usage: $0 <filename.vtt>\n" and exit if (!@ARGV);
 my $src = $ARGV[0];
 
-if (-e $src) {
+if (!-e $src) {
+	print "Unable to find file: ${src}\n" and exit;
+} else { 
 	my ($path, $filename, $ext) = $src =~ /(.+)\/(.+)\.(vtt)$/;
 	if (!defined $filename) {
-		print "Not a valid WebVTT file $src. Missing header!\n"; exit(1); 
+		print "!\n"; exit(1); 
 	}
 	my $dst = "${path}/${filename}.srt";
 	# load content from webvtt file
