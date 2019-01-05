@@ -30,9 +30,12 @@ if (!-e $src) {
 	# loop though each line, and convert timestamps into srt type
 	while (defined(my $line = <$info>)) {
 		if ($line =~ /^(\d{2}\:\d{2}(\:\d{2})?)\.(\d{3}) --> (\d{2}\:\d{2}(\:\d{2})?)\.(\d{3})/) {
+			my $time1 = (length($1) == 5) ? "00:$1" : $1;
+			my $time2 = (length($4) == 5) ? "00:$4" : $4;
+
 			# add UTF-8 BOM header to beginning of file
 			$content .= chr(0xFEFF) if ($count == 1);
-			$content .= "$count\n$1,$3 --> $4,$6\n";
+			$content .= "$count\n${time1},$3 --> ${time2},$6\n";
 			$count++;
 		} else {
 			# add all text lines to output
