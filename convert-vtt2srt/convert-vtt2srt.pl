@@ -29,10 +29,10 @@ if (!-e $src) {
 	}
 	# loop though each line, and convert timestamps into srt type
 	while (defined(my $line = <$info>)) {
-		if ($line =~ /^(\d{2}\:\d{2}\:\d{2})\.(\d+) --> (\d{2}\:\d{2}\:\d{2})\.(\d+)/) {
+		if ($line =~ /^(\d{2}\:\d{2}(\:\d{2})?)\.(\d{3}) --> (\d{2}\:\d{2}(\:\d{2})?)\.(\d{3})/) {
 			# add UTF-8 BOM header to beginning of file
 			$content .= chr(0xFEFF) if ($count == 1);
-			$content .= "$count\n$1,$2 --> $3,$4\n";
+			$content .= "$count\n$1,$3 --> $4,$6\n";
 			$count++;
 		} else {
 			# add all text lines to output
