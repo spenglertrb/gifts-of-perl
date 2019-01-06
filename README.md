@@ -14,10 +14,9 @@ I hope you find it usefull.
 
 After downloading the file, run it by:
 
-chmod +x convert-vtt2srt.pl
-
-./convert-vtt2srt.pl <filename>
+chmod +x convert-vtt2srt.pl\
+./convert-vtt2srt.pl <filename>\
 
 OR
 
-perl convert-vtt2srt.pl <filename>
+perl convert-vtt2srt.pl <filename>\
