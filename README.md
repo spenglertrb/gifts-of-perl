@@ -11,3 +11,8 @@ converting.
 I needed this in a workflow to feed a transcoder which did not support WebVTT natively.
 
 I hope you find it usefull.
+
+After downloading the file, run it by:
+chmod +x convert-vtt2srt.pl
+OR
+perl convert-vtt2srt.pl
