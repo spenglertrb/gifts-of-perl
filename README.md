@@ -8,15 +8,15 @@ Takes the full path of a file as argument, and will output a converted version
 of the file to the source path. The script will check for a valid WebVTT header, before
 converting.
 
-I needed this in a workflow to feed a transcoder which did not support WebVTT natively.
+I needed this in a workflow to feed a transcoder which did not support WebVTT natively.\n
 
 I hope you find it usefull.
 
 After downloading the file, run it by:
 
-chmod +x convert-vtt2srt.pl
-./convert-vtt2srt.pl <filename>
+chmod +x convert-vtt2srt.pl\n
+./convert-vtt2srt.pl <filename>\n
 
 OR
 
-perl convert-vtt2srt.pl <filename>
+perl convert-vtt2srt.pl <filename>\n
